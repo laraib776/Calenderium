@@ -1,0 +1,261 @@
+{% load static %}
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Calendarium_IST</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/assets1/img/slide/ist_logo.png' %}" rel="icon">
+  <link href="{% static 'images/assets1/img/slide/ist_logo.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+  <link href="{% static 'images/assets1/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'images/assets1/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'images/assets1/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'images/assets1/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'images/assets1/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'images/assets1/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'images/assets1/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'images/assets1/css/style.css' %}" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: Calendaarium
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+        <img src="{% static 'images/assets/img/ist_logo.png' %}" alt="">
+        <span>Calenderium</span>
+      </a>
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'home' %}" class="active">Home</a></li>
+          <li><a href="{% url 'societypg' %}" class="active">Society</a></li>
+          <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'list-events' %}">All events</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'add-event' %}">Add Event</a></li>
+            <li><a  href="{% url 'my_events' %}">My Events</a></li>
+            {% endif %}
+              <li><a href="{% url 'search_events' %}">Search events</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Venues</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'list-venues' %}">All venues</a></li>
+           {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+            <li><a href="{% url 'add-venue' %}">Add Venue</a></li>
+            {% endif %}
+            {% endif %}
+            </ul>
+          </li>
+          {% if user.is_authenticated %}
+
+          {% if user.is_superuser %}
+          <li><a href="{% url 'admin_approval' %}">Admin</a></li>
+          {% endif %}
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'register_user' %}">Register</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+{% endif %}
+          <li><a href="{% url 'coming_soon' %}"class="getstarted">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url({% static 'images/assets1/img/slide/ist1.jpg' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>IST</span></h2>
+              <p class="animate__animated animate__fadeInUp">Empower your future at IST University: Where knowledge meets innovation.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url({% static 'images/assets1/img/slide/ist4.jpg' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Calendarium</h2>
+              <p class="animate__animated animate__fadeInUp">Discover a world of seamless event management with Calendarium: Your gateway to organizing unforgettable experiences at IST University</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url({% static 'images/assets1/img/slide/ist3.webp' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Events</h2>
+              <p class="animate__animated animate__fadeInUp">Unleash the vibrancy of society through captivating events: Experience the pulse of cultural, artistic, and intellectual gatherings that ignite passions and foster connections</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>IST University & Calendarium</h2>
+            <h3>Seamless Event Planning Meets Innovative Education: Unleashing the Power of Calendarium at IST University</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              At IST University, we believe in the transformative power of events and the profound impact they can have on shaping a vibrant society. To ensure a seamless and unforgettable experience for both organizers and participants, we proudly introduce Calendarium, our cutting-edge event management platform.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i>Seamless Integration: We connects IST with community events.</li>
+              <li><i class="ri-check-double-line"></i>Effortless Management: Organizers easily plan, promote, and manage diverse events. </li>
+              <li><i class="ri-check-double-line"></i>Inspiring Environment: We create an inclusive, inspiring atmosphere.</li>
+            </ul>
+            <p class="fst-italic">
+              We welcome you to a world where innovation meets event management. Calendarium and IST University ignite extraordinary experiences, empowering organizers to curate unforgettable events. Join us as we redefine transformative education within a vibrant society.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Calendarium</h3>
+              <p>
+                IST University, T-choke <br>
+                Islamabad<br><br>
+                <strong>Phone:</strong> +929139091<br>
+                <strong>Email:</strong> calendariun@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Users</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">DSA</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Scociety's President</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Scociety's Vice President</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Managers</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">IST students</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>IST Societies</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Media CLub</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Adventure Club</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Art Club</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Youth Club</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sports Club</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Note !</h4>
+            <p>Hope Calendarium is helpful to ISt and it's students.</p>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+        Designed by @3LS
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'images/assets1/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'images/assets1/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'images/assets1/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'images/assets1/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'images/assets1/vendor/waypoints/noframework.waypoints.js' %}"></script>
+<script src="{% static 'images/assets1/vendor/php-email-form/validate.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'images/assets1/js/main.js' %}"></script>
+
+
+</body>
