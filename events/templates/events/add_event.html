@@ -1,0 +1,33 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+	<h1 class = 'text-white' style="font-family: 'Noto Serif Lao'; color: white;" >Add Event</h1>
+<br/><br/>
+
+{% if submitted %}
+    <p class="text-justify my-2" style="font-family: 'Noto Serif Lao'; color: white;">Your Event Was Submitted Successfully!!!</p>
+{% else %}
+
+		<form class = "text-white" action="" method=POST>
+			{% csrf_token %}
+
+			{{ form.as_p }}
+
+			<input type="submit" value="Submit" class="btn btn-secondary">
+
+		</form>
+		{% endif %}
+
+<br/><br/>	
+
+{% else %}
+<h1 class = "text-white" style="font-family: 'Noto Serif Lao'; color: white;">Sorry! You Must Be Logged In To View This Page...</h1>
+
+<a href="{% url 'login' %}">Login Here</a>
+
+{% endif %}
+
+
+{% endblock %}

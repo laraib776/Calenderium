@@ -1,0 +1,82 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+{% load static %}
+<style>
+	.table {
+		border: 25px;
+		background: #0c0d40;
+		border-radius:  15px;;
+
+}
+
+
+
+</style>
+
+    <h1 class="enlarging-title"></h1>
+    <a class="link" href="#"></a>
+    <div class="astroboy"></div>
+	<h1 class="display-2 mb-5 text-white" style="font-family: 'Noto Serif Lao'; color: white;">Approved Venues</h1>
+	<p class = "text-justify my-2 text-white" style="font-family: 'Noto Serif Lao'; color: black;"> Explore a diverse range of venues approved by the Department of Student Affairs (DSA)
+		for events held at the Institute of Space and Technology (IST). 
+		We are delighted to present you with a comprehensive list of venues that have been carefully 
+		selected to cater to various event requirements. 
+		Each venue has been thoughtfully equipped with state-of-the-art 
+		facilities and amenities to meet your specific needs. Please browse through the table 
+		below to discover the available venues for your upcoming event at IST.</p>
+<br/>
+<table class="table table-striped table-hover table-bordered table-responsive-sm" >
+	{% for venue in venues %}
+		<tr>
+			<td>
+				<a  class="text-white" href="{% url 'show-venue' venue.id %}">{{ venue }}</a>
+			</td>
+			{% if user.is_authenticated %}
+			{% if user.is_superuser %}
+			<td align="right">
+				<a href="{% url 'update-venue' venue.id %}" class="btn btn-secondary btn-sm">Update</a>
+
+				<a href="{% url 'delete-venue' venue.id %}" class="btn btn-outline-danger btn-sm">Delete</a>
+			</td>
+			{% endif %}
+			{% endif %}
+		</tr>
+	{% endfor %}
+</table>
+<br/></br/>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    
+ 
+
+{% if venues.has_previous %}
+	<li class="page-item"><a class="page-link" href="?page=1">&laquo First</a></li>
+
+	<li class="page-item"><a class="page-link" href="?page={{ venues.previous_page_number }}">Previous</a></li>
+	
+{% endif %}
+
+<!--
+<li class="page-item disabled"><a href="#" class="page-link">Page {{ venues.number }} of {{ venues.paginator.num_pages }}</a></li>
+-->
+
+{% for i in nums %}
+	<li class="page-item"><a class="page-link" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+
+{% endfor %}
+
+
+{% if venues.has_next %}
+	<li class="page-item"><a class="page-link" href="?page={{ venues.next_page_number }}">Next</a></li>
+
+	<li class="page-item"><a class="page-link" href="?page={{ venues.paginator.num_pages }}">Last &raquo</a></li>
+
+{% endif %}
+
+ </ul>
+</nav>
+<br/>
+
+{% endblock %}
