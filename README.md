@@ -15,7 +15,7 @@
 ║   ███████╗██║  ██║██║╚██████╔╝██║ ╚═╝ ██║                            ║
 ║   ╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝     ╚═╝                            ║
 ║                                                                      ║
-║     🗓️  Every Event. Every Society. Every Campus Moment.  🎓         ║
+║     🗓️  Every Event. Every Society. Every Campus Moment.  🎓        ║
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
