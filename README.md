@@ -1,85 +1,239 @@
-# Calenderium
+```
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║    ██████╗ █████╗ ██╗     ███████╗███╗   ██╗██████╗                 ║
+║   ██╔════╝██╔══██╗██║     ██╔════╝████╗  ██║██╔══██╗                ║
+║   ██║     ███████║██║     █████╗  ██╔██╗ ██║██║  ██║                ║
+║   ██║     ██╔══██║██║     ██╔══╝  ██║╚██╗██║██║  ██║                ║
+║   ╚██████╗██║  ██║███████╗███████╗██║ ╚████║██████╔╝                ║
+║    ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝╚═════╝                 ║
+║                                                                      ║
+║   ███████╗██████╗ ██╗██╗   ██╗███╗   ███╗                           ║
+║   ██╔════╝██╔══██╗██║██║   ██║████╗ ████║                           ║
+║   █████╗  ██████╔╝██║██║   ██║██╔████╔██║                           ║
+║   ██╔══╝  ██╔══██╗██║██║   ██║██║╚██╔╝██║                           ║
+║   ███████╗██║  ██║██║╚██████╔╝██║ ╚═╝ ██║                           ║
+║   ╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝     ╚═╝                           ║
+║                                                                      ║
+║     🗓️  Every Event. Every Society. Every Campus Moment.  🎓         ║
+╚══════════════════════════════════════════════════════════════════════╝
+```
 
-Calenderium is a dynamic web application designed to streamline event management and communication within a university setting. It caters to both students and society presidents, providing a user-friendly platform for event discovery, registration, and administration.
+<div align="center">
 
-**Key Features:**
+![Django](https://img.shields.io/badge/Django-Backend-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite3-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-Styled-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-**1- Student Portal:**
+**[⭐ Star this repo](https://github.com/laraib776/Calenderium)** · **[🐛 Report a Bug](https://github.com/laraib776/Calenderium/issues)** · **[🤝 Contribute](#-contributing)**
 
-View upcoming events with date, time, venue, and description.
+</div>
 
-Register for events and download digital tickets.
+---
 
-Search for events by keyword, date, or venue.
+## 🎓 Missing Events Because Nobody Told You?
 
-Access information about different university societies.
+> **No more missed deadlines. No more "I didn't know about that event."**
+> Calenderium puts every university event, society, and venue onto one beautiful interactive calendar — visible to every student, manageable by every society president.
+>
+> ### 👉 **Discover. Register. Attend. Never miss a moment on campus.** 👈
+>
+> *The smarter way to run university life — for students and admins alike.*
 
-**2- Admin Portal (Society Presidents):**
+> [!NOTE]
+> Calenderium is a **full-stack Django web application** with separate portals for students and society presidents, backed by SQLite3 and a fully interactive calendar interface.
 
-Create and manage events, specifying details like date, time, venue, and registration deadline.
+---
 
-Upload event posters and promotional materials.
+## ✦ About Calenderium
 
-View event registrations and manage participant lists.
+> **Calenderium** is a dynamic university event management platform built with **Django, SQLite3, HTML, CSS, and JavaScript**. It bridges the gap between students who want to discover events and society presidents who need to manage them — all under one centralised, easy-to-use web interface.
+>
+> Interactive calendar. Digital tickets. Venue management. Society pages. Everything your campus needs, finally in one place.
 
-**3- Interactive Calendar:**
+---
 
-Visual representation of events with clickable dates.
+##  ✨ Key Features
 
-Clear overview of scheduled events and available venues.
+### 👩‍🎓 Student Portal
 
-**4- Venue Management:**
+| Feature | Details |
+|---|---|
+| 📅 **Event Discovery** | Browse upcoming events with date, time, venue & description |
+| 🎟️ **Registration & Tickets** | Register for events and download digital tickets |
+| 🔍 **Smart Search** | Search events by keyword, date, or venue |
+| 🏛️ **Society Directory** | Explore all university societies and their details |
 
-Search for available venues by name or location.
+### 🛡️ Admin Portal *(Society Presidents)*
 
-View venue details, including capacity, amenities, and booking status.
+| Feature | Details |
+|---|---|
+| ➕ **Event Creation** | Create events with full details, deadlines & poster uploads |
+| 👥 **Participant Management** | View registrations and manage participant lists |
+| 🗂️ **Event Management** | Edit, update, or remove events anytime |
 
-**5- Society Pages:**
+### 🌐 Platform-Wide Features
 
-Detailed information about each university society, including their activities, contact details, and upcoming events.
+| Feature | Details |
+|---|---|
+| 🗓️ **Interactive Calendar** | Visual calendar with clickable dates and event previews |
+| 🏢 **Venue Management** | Search venues by name, location, capacity & booking status |
+| 🏠 **University Homepage** | Centralised news, announcements & upcoming events |
+| 📄 **Society Pages** | Per-society pages with activities, contact info & events |
 
-**6- University Homepage:**
+---
 
-Centralized information about university news, events, and important announcements.
+##  🛠️ Technology Stack
 
-**7- Technology Stack:**
+```
+  ╭──────────────────┬──────────────────────────────────────────────╮
+  │  Layer           │  Technology                                  │
+  ├──────────────────┼──────────────────────────────────────────────┤
+  │  🐍  Language    │  Python 3.x                                 │
+  │  🌐  Framework   │  Django  (full-stack web framework)         │
+  │  💾  Database    │  SQLite3  (via Django ORM)                  │
+  │  🏗️  Frontend    │  HTML5  ·  CSS3  ·  Vanilla JavaScript      │
+  ╰──────────────────┴──────────────────────────────────────────────╯
+```
 
-**Backend:** Django (Python framework)
+---
 
-**Database:** SQLite3
+##  🚀 Installation & Setup
 
-**Frontend:** HTML, CSS, JavaScript
+### Step 1 — Install Python & pip
 
-**Installation:**
+```
+🔗  https://www.python.org/downloads/
+```
 
-1- Ensure you have Python and pip installed on your system.
+### Step 2 — Clone the Repository
 
-2- Clone the repository: git clone <repository-url>
+```bash
+git clone https://github.com/laraib776/Calenderium.git
+cd Calenderium
+```
 
-3- Navigate to the project directory: cd UniEvents
+### Step 3 — Install Required Packages
 
-4- Install required packages: pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
 
-5- Create a database file: python manage.py makemigrations && python manage.py migrate
+### Step 4 — Set Up the Database
 
-6- Run the development server: python manage.py runserver
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
 
-**Getting Started:**
+### Step 5 — Run the Development Server
 
-1- Access the website through the provided URL in your terminal.
+```bash
+python manage.py runserver
+```
 
-2- Create an admin account to manage events and societies.
+> 🌐 Open your browser and visit:
+> ```
+> http://127.0.0.1:8000
+> ```
 
-3- Register as a student to browse events and register for them.
+---
 
-4- Explore the interactive calendar and search features to discover events of interest.
+##  🎮 Getting Started
 
-**Contributions:**
+Once the server is running:
 
-Contributions to UniEvents are welcome! Please fork the repository and submit a pull request with any improvements or new features.
+```
+  🛡️   Step 1  →  Create an admin account to manage events & societies
+  👩‍🎓  Step 2  →  Register as a student to browse and join events
+  🗓️   Step 3  →  Explore the interactive calendar for upcoming events
+  🔍  Step 4  →  Use search to find events by keyword, date, or venue
+  🎟️   Step 5  →  Register for an event and download your digital ticket
+```
 
-**Author:**
+> [!TIP]
+> Create a **superuser** for full Django admin panel access:
+> ```bash
+> python manage.py createsuperuser
+> ```
+> Then visit `http://127.0.0.1:8000/admin` to manage everything from the backend.
 
-Laraib Khalid
+---
 
-I hope this helps
+##  📁 Project Structure
+
+```
+📦 Calenderium/
+ │
+ ├── 📄 manage.py                  ← Django project entry point
+ ├── 📄 requirements.txt           ← All dependencies
+ ├── 📄 README.md                  ← You are here 👋
+ ├── 💾 db.sqlite3                 ← SQLite database (auto-generated)
+ │
+ ├── 📂 calenderium/               ← Main Django project settings
+ │    ├── ⚙️  settings.py
+ │    ├── 🔗 urls.py
+ │    └── 🚀 wsgi.py
+ │
+ ├── 📂 events/                    ← Event management app
+ ├── 📂 students/                  ← Student portal app
+ ├── 📂 societies/                 ← Society pages app
+ ├── 📂 venues/                    ← Venue management app
+ │
+ └── 📂 templates/                 ← HTML templates
+      └── 🏗️  base.html  ·  calendar.html  ·  home.html ...
+```
+
+---
+
+##  ⚠️ Important Notes
+
+> [!IMPORTANT]
+> Always run `makemigrations` followed by `migrate` after cloning — this generates the `db.sqlite3` database file. Without this step the app will not run correctly.
+
+> [!WARNING]
+> Never use `python manage.py runserver` in a production environment. For deployment, use a proper WSGI server like **Gunicorn** with **Nginx**.
+
+---
+
+##  🤝 Contributing
+
+Contributions are always welcome and appreciated! 💖
+
+```
+  1. 🍴  Fork the repository
+  2. 🌿  Create your feature branch
+  3. 💾  Commit your changes
+  4. 📬  Open a Pull Request
+```
+
+Ideas we'd love to see: email notifications for event reminders, a mobile app version, Google Calendar sync, or an event rating system — all PRs are warmly welcome!
+
+---
+
+##  📜 License
+
+Calenderium is licensed under the **MIT License** — free to use, modify, and share.
+See the `LICENSE` file for full details.
+
+---
+
+<div align="center">
+
+```
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║    University life moves fast.                               ║
+║    Calenderium makes sure you never fall behind.  🗓️🎓      ║
+║                                                              ║
+║                Made with ❤️  by  Laraib Khalid              ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+```
+
+*⭐ Drop a star if Calenderium made campus life a little easier!*
+
+</div>
