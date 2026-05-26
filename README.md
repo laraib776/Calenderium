@@ -34,7 +34,7 @@
 
 ---
 
-## 🎓 Missing Events Because Nobody Told You?
+## 🎓 Missing Events Because Nobody Told You??
 
 > **No more missed deadlines. No more "I didn't know about that event."**
 > Calenderium puts every university event, society, and venue onto one beautiful interactive calendar — visible to every student, manageable by every society president.
